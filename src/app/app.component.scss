@@ -60,3 +60,238 @@ $animationSpeed: 40s;
 		}
 	}
 }
+
+/* ....................................
+4. Slider
+.......................................*/
+
+
+/*****Slider type 1*****/
+
+.slider-area {
+    background-size: cover;
+    min-height: 730px;
+}
+
+.slide-div {
+    padding-top: 273px;
+    position: relative;
+}
+
+.line-head {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    line-height: 13px;
+    margin-bottom:50px;
+	color: #38b7ff;
+	margin-left: 15%;
+}
+
+.line-head .line {
+    position: absolute;
+    width: 100px;
+    height: 1px;
+}
+
+.line-head .line.before {
+    left: -119px;
+    top: 50%;
+}
+
+.line-head .line.after {
+    right: -119px;
+    top: 50%;
+}
+
+.banner-head {
+    font-size: 46px;
+    color: #fff;
+    line-height: 66px;
+    font-weight: 700;
+}
+
+.slide-div .owl-nav button {
+    position: absolute;
+    top: 43%;
+}
+
+.slide-div .owl-nav button i {
+    font-size: 24px;
+    opacity: .5;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    color: #fff;
+}
+
+.slide-div .owl-nav button:hover i {
+    opacity: 1;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+.slide-div .owl-nav .owl-prev {
+    left: -190px;
+}
+
+.slide-div .owl-nav .owl-next {
+    right: -190px;
+}
+
+.slide-div .owl-dots .owl-dot {
+    height: 2px;
+    width: 25px;
+    margin-top:-80px;
+    margin-right:8px;
+    margin-left:8px;
+    opacity: .3;
+    background-color: #fff;
+}
+
+.slide-div .owl-dots .owl-dot.active {
+    opacity: 1;
+}
+
+.slide-div .owl-dots {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -100px;
+    line-height: 0;
+}
+
+
+/*****Slider type 2*****/
+
+.silder-img {
+    background-size: cover;
+    min-height: 694px;
+}
+
+.slider-content {
+    padding-top: 178px;
+}
+
+.banner-head-2 {
+    font-size: 48px;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.dots-slider .owl-dot {
+    height: 2px;
+    width: 25px;
+    margin: 0px;
+    margin-right: 15px;
+    opacity: .3;
+    background-color: #fff;
+    border: none;
+}
+
+.dots-slider {
+    line-height: 0;
+}
+
+.dots-slider .owl-dot.active {
+    opacity: 1;
+}
+
+.slider-btn {
+    width: 90px;
+    height: 50px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.slider-control {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 60px;
+}
+
+.slider-btn:hover {
+    background-color: #fff;
+}
+
+.slide-social {
+    width: 52px;
+    position: relative;
+    text-align: right;
+    float: right;
+}
+
+.slide-social-outer {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.slide-social ul > li {
+    display: block;
+}
+
+.slide-social li a {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border-radius: 50%;
+}
+
+.slide-social li {
+    margin-bottom: 15px;
+}
+
+
+/*****Slider type 3*****/
+
+.slider-content-3 {
+    padding-top: 229px;
+}
+
+.slider-control.type-3 {
+    bottom: 25px;
+}
+
+.slider-control.type-3 .dots-slider .owl-dot {
+    opacity: .3;
+}
+
+.slider-control.type-3 .dots-slider .owl-dot.active {
+    opacity: 1;
+}
+
+
+.bg-green, .btn-round, .shop-icon .count, .main-menu li:after, .line-head .line, .blob.green, .btn-square, .slide-div .owl-dots .owl-dot.active, .callback-area[data-overlay]::before, .service-box:hover, .service-box:hover .service-icon-bg, .plus-btn, .arrow-navigation .nav-slide, .btn-round-blue:hover, .price-each.active, .price-tabs .nav-link.active, .testimonial-slider .arrow-btn:hover, .btn-square-green, .btn-square-white:hover, .each-blog:hover .blog-date, .contact-area:before, .social-links li a:hover, .links-list a:before, .scroll-btn, .dots-slider .owl-dot.active, .slide-social li a:hover, .team-green-head[data-overlay]::before, .career-box[data-overlay]::before, .mobile-menu-2.mean-container .meanmenu-reveal, .btn-square-border:hover, .slider-control.type-3 .dots-slider .owl-dot.active, .service-list-3:hover, .team-detail-3 h5:before, .each-team-3:hover .team-detail-3[data-overlay]::before, .btn-square-blue:hover, .btn-blue:hover, .price-each-2.active, .testimonial-3-slide .owl-dot.active span, .fancy-2:after, .right-box-head h4:after, .social-profile-box:hover, .block-quote-by:before, .tag-link:hover, .categories li a span, .slider-type-blog.owl-carousel .owl-nav button.owl-next, .slider-type-blog.owl-carousel .owl-nav button.owl-prev, .pagination-type1 ul li a:hover, .pagination-type1 ul li.active a, .portfolio-overlay:before, .line-right:after, .experience li:after{
+	background: red;
+}
+.bg-green, .btn-round, .shop-icon .count, .main-menu li:after, .line-head .line, .blob.green, .btn-square, .slide-div .owl-dots .owl-dot.active, .callback-area[data-overlay]::before, .service-box:hover, .service-box:hover .service-icon-bg, .plus-btn, .arrow-navigation .nav-slide, .btn-round-blue:hover, .price-each.active, .price-tabs .nav-link.active, .testimonial-slider .arrow-btn:hover, .btn-square-green, .btn-square-white:hover, .each-blog:hover .blog-date, .contact-area:before, .social-links li a:hover, .links-list a:before, .scroll-btn, .dots-slider .owl-dot.active, .slide-social li a:hover, .team-green-head[data-overlay]::before, .career-box[data-overlay]::before, .mobile-menu-2.mean-container .meanmenu-reveal, .btn-square-border:hover, .slider-control.type-3 .dots-slider .owl-dot.active, .service-list-3:hover, .team-detail-3 h5:before, .each-team-3:hover .team-detail-3[data-overlay]::before, .btn-square-blue:hover, .btn-blue:hover, .price-each-2.active, .testimonial-3-slide .owl-dot.active span, .fancy-2:after, .right-box-head h4:after, .social-profile-box:hover, .block-quote-by:before, .tag-link:hover, .categories li a span, .slider-type-blog.owl-carousel .owl-nav button.owl-next, .slider-type-blog.owl-carousel .owl-nav button.owl-prev, .pagination-type1 ul li a:hover, .pagination-type1 ul li.active a, .portfolio-overlay:before, .line-right:after, .experience li:after{
+	background: red;
+}
+
+
+.dream-btn-group{
+	a{
+		color: white;
+    	background: #656565;
+	}:hover{
+		background: #38b7ff !important;
+	}
+}
+
+.outer-dom{
+    display: flex;
+} 
+.contenet h5{
+    color:  #38b7ff !important;
+    left: 0 !important;
+    display: flex !important;
+}

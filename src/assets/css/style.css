@@ -652,6 +652,7 @@ section {
   transition: all 0.4s ease-in-out;
   display: inline-block;
   padding: 15px 0;
+  filter: invert(21%) sepia(96%) saturate(2576%) hue-rotate(350deg) brightness(80%) contrast(101%) !important;
 }
 
 .clients img:hover {
@@ -958,6 +959,15 @@ section {
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
+
+.pricing .box:hover .title{
+  transition: .4s ease-out; 
+  font-size: 30px;
+}
+
+.pricing .box:hover .amount{
+  font-size: 30px;
+}
 .pricing .box {
   padding: 20px;
   background: #f9f9f9;
@@ -979,7 +989,7 @@ section {
 .pricing .box h4 {
   font-size: 42px;
   color: #cc1616;
-  font-weight: 500;
+  font-weight: bold;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 20px;
 }
