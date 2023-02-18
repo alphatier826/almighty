@@ -1048,9 +1048,7 @@ section {
   transition: 0.3s;
 }
 
-.pricing .box .btn-buy:hover {
-  background: #e82d2d;
-}
+
 
 .pricing .featured {
   background: #cc1616;
