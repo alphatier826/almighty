@@ -4,12 +4,12 @@
       <div class="section-title">
         <span>Pricing</span>
         <h2>Pricing</h2>
-        <p>Free equity investments and flat ₹20 intraday and F&O trades</p>
+        <!-- <p>Free equity investments and flat ₹20 intraday and F&O trades</p> -->
       </div>
 
       <div class="row">
 
-        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="150" *ngFor="let price of prices">
+        <div class="col-lg-3 col-md-6 pricing-wrapper" data-aos="zoom-in" data-aos-delay="150" *ngFor="let price of prices">
           <div class="box">
             <h3 class="title">{{price.title}}</h3>
             <h4 class="amount"><sup>&#x20B9; {{price.amount}}</sup></h4>
@@ -19,7 +19,7 @@
               
             </ul>
             <div class="btn-wrap">
-              <a href="#" class="btn-buy">Buy Now <i class="fa fa-shopping-cart cart-icon-hover"></i></a>
+              <a class="btn-buy">Buy Now <i class="fa fa-shopping-cart cart-icon-hover"></i></a>
             </div>
           </div>
         </div>
