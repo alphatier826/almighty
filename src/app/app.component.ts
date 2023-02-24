@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
       this.isLoad = false;
     }, 2000);
     for (let index = 0; index < 10; index++) {
-      this.newsContents.push(index+1 +' - Do Media Vultures Perpetuate Mass Shootings?');
+      this.newsContents.push(index+1 +' - Do we Media Vultures Perpetuate Mass Shootings?');
       
     }
     this.listResources
