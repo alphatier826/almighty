@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlmightyService } from '../../../service/almight.service';
 
 @Component({
   selector: 'app-ahm-pricing',
@@ -9,7 +10,7 @@ export class AhmPricingComponent implements OnInit {
 
   prices = []
 
-  constructor() { }
+  constructor(private almightyService: AlmightyService) { }
 
   ngOnInit() {
     const price = [{
@@ -34,6 +35,18 @@ export class AhmPricingComponent implements OnInit {
       isActive: false
     }];
     this.prices = price;
+    this.almightyService.getNews().subscribe(
+      (data: any) => {
+        console.log(data)
+        if(data && data.id){
+         
+        }
+      },
+      (err: any) => {
+        console.error(err);
+       }
+    );
+
   }
 
 }

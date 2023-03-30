@@ -1,3 +1,11 @@
 .head-logo{
     height: 4rem;
 }
+.wrapper-div{
+    height: 100vh;
+}
+
+
+button{
+    box-shadow: none !important;
+}

@@ -1,0 +1,46 @@
+.title-sub{
+    color: grey;
+}
+.news-label{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 2rem;
+}
+
+.add-btn{
+    margin-top: 2rem;
+}
+
+.news-wrap{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    flex: 0 0 auto;
+    width: 32.333333%;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+.preview-newsfeed{
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.news-active{
+    box-shadow: rgb(4 247 57 / 35%) 0px 5px 15px;
+}
+.news-not-saved{
+    box-shadow: rgba(255, 3, 3, 0.35) 0px 5px 15px;
+}
+.news-wrap:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.ml-1{
+    margin-left: 1rem;
+}
+
+.news-save-btn{
+    right: 27px;
+    position: absolute;
+}

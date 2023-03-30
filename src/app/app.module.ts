@@ -1,30 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AhmServicesComponent } from './components/ahm-services/ahm-services.component';
-import { AhmAboutComponent } from './components/ahm-about/ahm-about.component';
-import { AhmWhyUsComponent } from './components/ahm-why-us/ahm-why-us.component';
-import { AhmPortfolioComponent } from './components/ahm-portfolio/ahm-portfolio.component';
-import { AhmPricingComponent } from './components/ahm-pricing/ahm-pricing.component';
-import { AhmTeamComponent } from './components/ahm-team/ahm-team.component';
-import { AhmContactComponent } from './components/ahm-contact/ahm-contact.component';
+import { AhmHomeModule} from './components/ahm-home/ahm-home.module';
+import { AhmLoginComponent } from './components/ahm-login/ahm-login.component';
+import { AhmAdminModule } from './components/ahm-admin/ahm-admin.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AhmServicesComponent,
-    AhmAboutComponent,
-    AhmWhyUsComponent,
-    AhmPortfolioComponent,
-    AhmPricingComponent,
-    AhmTeamComponent,
-    AhmContactComponent
+    AhmLoginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AhmAdminModule,
+    AhmHomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
