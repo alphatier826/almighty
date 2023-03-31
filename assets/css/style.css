@@ -962,7 +962,7 @@ section {
 
 .pricing .box:hover .title{
   transition: .4s ease-out; 
-  font-size: 30px;
+  transform: scale(1.5);  
 }
 
 .pricing .box:hover .amount{
