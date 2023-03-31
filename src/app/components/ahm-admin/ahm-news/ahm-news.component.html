@@ -28,7 +28,7 @@
     </div>
     <div class="col-12 mt-1">
         <div class="row">
-            <div class="p-3 news-wrap" *ngFor="let newsItem of news" [ngClass]="{'news-active': isSelected === i, 'news-not-saved': newsItem.notSaved}"(click)="call(i)">
+            <div class="p-3 news-wrap" *ngFor="let newsItem of news; index as i; trackBy: trackByFn" [ngClass]="{'news-active': isSelected === i, 'news-not-saved': newsItem.notSaved}"(click)="call(i)">
                 <div class="form-group">
                     <p class="preview-newsfeed">{{newsItem.feed}}</p>
                   </div>
