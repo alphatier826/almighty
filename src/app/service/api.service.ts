@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders, HttpResponse, HttpParameterCodec, HttpParams }
 })
 export class ApiService {
 
-    public wqmEndpoint: string = ("https://cute-pantsuit-crab.cyclic.app" || location.origin);
+    public wqmEndpoint: string = location.origin.match('4200')? "http://localhost:5000": "https://cute-pantsuit-crab.cyclic.app";
   constructor(private http: HttpClient) { }
 
 

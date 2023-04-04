@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 
 import { AhmServicesComponent } from './ahm-services/ahm-services.component';
@@ -28,7 +31,12 @@ import { AhmHomeComponent } from './ahm-home.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      preventDuplicates: true,
+      timeOut: 3000
+    })
   ]
 })
 export class AhmHomeModule { }

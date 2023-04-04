@@ -39,3 +39,8 @@
     top: -10px;
     position: relative;
 }
+
+#toast-container > .toast {
+    max-width: 1200px;
+    width: 90%;
+}
