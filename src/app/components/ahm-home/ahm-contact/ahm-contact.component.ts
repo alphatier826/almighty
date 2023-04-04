@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AhmContactComponent implements OnInit {
 
   constructor() { }
-  emailObj: any ={};
+  emailObj: any ={name:'',email:'', subject:'', message:''};
   ngOnInit() {
   }
 
