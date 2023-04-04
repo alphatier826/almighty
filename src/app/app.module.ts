@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 
 
 
@@ -21,8 +20,7 @@ import { AhmAdminModule } from './components/ahm-admin/ahm-admin.module';
     AppRoutingModule,
     AhmAdminModule,
     AhmHomeModule,
-    HttpClientModule,
-    FormsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
