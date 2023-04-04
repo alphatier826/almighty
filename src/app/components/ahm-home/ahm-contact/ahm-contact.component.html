@@ -43,7 +43,7 @@
         </div>
 
         <div class="col-lg-6">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <div  role="form" class="php-email-form">
             <div class="row">
               <div class="col-md-6 form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required [(ngModel)]="emailObj.name">
@@ -64,7 +64,7 @@
               <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
             <div class="text-center"><button type="submit" (click)="sendMail()">Send Message</button></div>
-          </form>
+          </div>
         </div>
 
       </div>
