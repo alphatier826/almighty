@@ -33,3 +33,9 @@
         margin-left: 6rem;
     }
 }
+
+.img-contact{
+    height: 25rem;
+    top: -10px;
+    position: relative;
+}
