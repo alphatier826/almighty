@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgIf } from '@angular/common';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -10,6 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class AhmHomeComponent implements OnInit {
 
+  constructor(private router: Router){}
   title = 'AHMv2';
   isLoad:boolean = false;
   newsContents = [];
@@ -28,6 +30,10 @@ export class AhmHomeComponent implements OnInit {
   listResources(): Observable<any> {
     const obj:any = {name:'nik'};
     return obj;
+  }
+
+  navAdmin(val){
+    this.router.navigate([val]);
   }
 
 }
