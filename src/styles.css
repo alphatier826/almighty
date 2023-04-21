@@ -1,4 +1,6 @@
-.head-logo{
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-alpine.css";
+.head-logo{    
     height: 4rem;
 }
 .wrapper-div{
@@ -8,4 +10,47 @@
 
 button{
     box-shadow: none !important;
+}
+
+.card-div{
+    background: #fff;
+    margin: 1.5rem!important;
+    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+.ml-auto{
+    margin-left: auto !important;
+}
+
+.admin-btn{
+    background: orange  0% 0% no-repeat padding-box !important;
+    opacity: 1;
+    font: Bold 12px/22px "Raleway", sans-serif !important;
+    letter-spacing: 0;
+    color: #fff !important;
+    min-width: 4rem !important;
+    border: 2px solid orange !important;
+    border-radius: 24px !important;
+    padding: 0.2rem 1em !important;
+    box-shadow: none !important;
+}
+
+.admin-btn-cncl{
+    background: #fff  0% 0% no-repeat padding-box !important;
+    opacity: 1;
+    font: Bold 12px/22px "Raleway", sans-serif !important;
+    letter-spacing: 0;
+    color: #6c757d !important;
+    min-width: 4rem !important;
+    border: 3px solid #6c757d !important;
+    border-radius: 24px !important;
+    padding: 0.2rem 1em !important;
+    box-shadow: none !important;
+}
+
+
+
+.admin-btn:hover{
+    background: #EA8119  0% 0% no-repeat padding-box !important;
+        box-shadow: 0px 1px 4px #EA8119  !important;
 }

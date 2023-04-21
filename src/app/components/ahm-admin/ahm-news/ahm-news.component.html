@@ -1,16 +1,40 @@
-<div class="wrapper-div p-3" style="background-color: rgba(188, 187, 187, 0.37);">
+<div class="p-3 card-div">
     <div class="row">
-        <div class="col-12">
+        <div class="col-10">
             <h3>News</h3>
         </div>
+        <div class="col-2 d-flex">
+            <span class="mt-2">Automatic</span>
+            <div class="button r" id="button-1">
+                <input type="checkbox" class="checkbox" [checked]="!isAutomatic" (click)=check($event)/>
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+        </div>
     </div>
-    <div class="row mt-1">
-        <div class="col-12">
-            <span class="title-sub">Add your own custom news items.</span>
+    <div class="row mt-1 mb-2">
+        <div class="col-11">
+            <span class="title-sub">Add your own custom news.</span>
+        </div>
+        <div class="col-1">
+            <button type="button" class="btn admin-btn  btn-sm" data-bs-toggle="modal" data-bs-target="#createModal">Create</button>
         </div>
     </div>
     <div class="col-12">
         <div class="row">
+            <ag-grid-angular 
+                style="height: 518px;" 
+                class="ag-theme-alpine"
+                [rowData]="rowData" 
+                [pagination]=true
+                [paginationPageSize]="10"
+                (gridReady)="onGridReady($event)"
+                [defaultColDef]="defaultColDef"
+                [frameworkComponents]="frameworkComponents"
+                [columnDefs]="columnDefs">
+            </ag-grid-angular>
+        </div>
+        <!-- <div class="row">
             <div class="col-8">
                 <div class="form-group">
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" (input)="onValueChangeUpdateNews($event, 'add')">{{newContent}}</textarea>
@@ -19,14 +43,14 @@
             <div class="col-2">
                 <button type="button add-btn" class="btn btn-info btn-sm add-btn" (click)="addNews()"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add more</button>
             </div>
-        </div>
+        </div> -->
     </div>
-    <div class="col-12 mt-4 d-flex" >
+    <!-- <div class="col-12 mt-4 d-flex" >
         <button *ngIf="isSelected != -1" type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#editModal" (click)="editNewsFeed()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>
         <button *ngIf="isSelected != -1" type="button" class="btn btn-danger btn-sm ml-1"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
         <button  type="button" class="btn btn-primary btn-sm ml-1 news-save-btn"><i class="fa fa-check-circle" aria-hidden="true"></i> Save</button>
-    </div>
-    <div class="col-12 mt-1">
+    </div> -->
+    <!-- <div class="col-12 mt-1">
         <div class="row">
             <div class="p-3 news-wrap" *ngFor="let newsItem of news; let i = index" [ngClass]="{'news-active': isSelected === i, 'news-not-saved': newsItem.notSaved}"(click)="call(i)">
                 <div class="form-group">
@@ -34,8 +58,29 @@
                   </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
+
+<!-- Create News Modal -->
+<div class="modal fade" id="createModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="createModalLabel">Create News Feed</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" (input)="onValueChangeUpdateNews($event, 'add')">{{editNewsFeedContent}}</textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary btn-sm" (click)="saveNews()">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Modal -->
   <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">

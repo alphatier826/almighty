@@ -17,4 +17,9 @@ export class AlmightyService {
   sendMail(mailObj): Observable<any>{
     return this.apiService.invokeAPI(`/user/sendMail`, 'POST', mailObj);
   }
+
+  /* News APIs */
+  save(feed: string): Observable<any>{
+    return this.apiService.invokeAPI("/news", 'POST', {feed});
+  }
 }

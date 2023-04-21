@@ -1,0 +1,90 @@
+<div class=" p-3 card-div">
+    <div class="row header mb-3">
+        <div class="col-9">
+            <h3>Services</h3>
+        </div>
+        <div class="col-3">
+            <button type="button" class="btn admin-btn btn-sm" style=" margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#deleteModal" *ngIf="selectedTab != -1">Delete</button>
+            <button type="button" class="btn admin-btn btn-sm" style=" margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#editModal" *ngIf="selectedTab != -1">Edit</button>
+            <button type="button" class="btn admin-btn btn-sm" style="float: right;" (click)="addTileService()">Add Service</button>
+        </div>
+    </div>
+
+
+    <div class="row admin-service service-tiles" id="services">
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" *ngFor="let service of serviceData; index as i;" data-aos="fade-up">
+          <div class="icon-box" [ngClass]="{'box-active': selectedTab === i}" (click)="selectedTab = i">
+            <div class="icon">
+              <img src="./assets/img/serviceIcon/algoTrading.png" class="service-img" />
+            </div>
+            <h4><a>{{service.title}}</a></h4>
+            <p>{{service.desc}}</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="https://firebasestorage.googleapis.com/v0/b/fir-project-9afa6.appspot.com/o/Almighty%20Algo%2FanimatedIcon%2Ftrash.gif?alt=media&amp;token=41be097f-4c97-4815-af7b-594c061d83e0" style=" width: 25px; ">
+              <h5 class="modal-title" id="deleteModalLabel">Delete Service</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="deselectTab()"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group m-2">
+                    <h6>Are you sure you want to delete <b>This</b> service?</h6>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn admin-btn-cncl btn-sm" data-bs-dismiss="modal" (click)="deselectTab()">Close</button>
+              <button type="button" class="btn admin-btn btn-primary btn-sm" >Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content edit-modal-content">
+            <div class="modal-header">
+              <img src="https://firebasestorage.googleapis.com/v0/b/fir-project-9afa6.appspot.com/o/Almighty%20Algo%2FanimatedIcon%2Fedit.gif?alt=media&token=9a4e0143-f3d3-48f6-8b67-1ba3ebef1e4d" style=" width: 25px; ">
+              <h5 class="modal-title" id="editModalLabel">Edit Service</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="deselectTab()"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group m-2">
+                    <div class="row">
+                        <div class="col-4">Title</div>
+                        <div class="col-8">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-4">Descriptions</div>
+                        <div class="col-8">
+                            <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-4">Image</div>
+                        <div class="col-4">
+                            <input type="file" accept="image/*" (change)="importAttachment($event)">
+                        </div>
+                        <div class="col-4" *ngIf="iconImg">
+                            <div class="card" style="width: 7rem;margin-left: 2rem;">
+                                <img [src]="iconImg" class="card-img-top" alt="...">
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn admin-btn-cncl btn-sm" data-bs-dismiss="modal" (click)="deselectTab()">Close</button>
+              <button type="button" class="btn admin-btn btn-primary btn-sm" >Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>

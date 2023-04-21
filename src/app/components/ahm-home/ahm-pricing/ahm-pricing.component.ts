@@ -35,17 +35,17 @@ export class AhmPricingComponent implements OnInit {
       isActive: false
     }];
     this.prices = price;
-    // this.almightyService.getNews().subscribe(
-    //   (data: any) => {
-    //     console.log(data)
-    //     if(data && data.id){
+    this.almightyService.getNews().subscribe(
+      (data: any) => {
+        console.log(data)
+        if(data && data.id){
          
-    //     }
-    //   },
-    //   (err: any) => {
-    //     console.error(err);
-    //    }
-    // );
+        }
+      },
+      (err: any) => {
+        console.error(err);
+       }
+    );
 
   }
 
